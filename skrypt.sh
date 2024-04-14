@@ -23,7 +23,16 @@ fi
 #help
 if [[ "$1" == "--help" || "$1" == "-h" ]]; then
 echo "Menu of all commands: "
-echo "--help 		Display help menu"
-echo "--date 		Display today's date"
+echo "--help 		Display help menu."
+echo "--date 		Display today's date."
 echo "--logs [x]	Creeate x log files. Default is 100."
+echo "--init		Clone repository and add to PATH."
 fi
+
+
+#init
+if [[ "$1" == "--init" ]]; then
+	git clone https://github.com/Lesiiaa/narzIT_laby4 "$PWD/lnarzIT_laby4_clone"
+	PATH=$PATH:$PWD/lab_clone
+fi
+
