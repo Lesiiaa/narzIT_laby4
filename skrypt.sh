@@ -19,3 +19,11 @@ if [[ "$1" == "--logs" ]]; then
 		echo "Date: $(date)" >> "log$i.txt"
 	done
 fi
+
+#help
+if [[ "$1" == "--help" ]]; then
+echo "Menu of all commands: "
+echo "--help 		Display help menu"
+echo "--date 		Display today's date"
+echo "--logs [x]	Creeate x log files. Default is 100."
+fi
