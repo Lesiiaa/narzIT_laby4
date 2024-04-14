@@ -23,7 +23,7 @@ fi
 #help
 if [[ "$1" == "--help" || "$1" == "-h" ]]; then
 echo "Menu of all commands: "
-echo "--help 		Display help menu"
-echo "--date 		Display today's date"
-echo "--logs [x]	Creeate x log files. Default is 100."
+echo "--help, -h 		Display help menu"
+echo "--date, -d 		Display today's date"
+echo "--logs [x], -l [x]	Creeate x log files. Default is 100."
 fi
