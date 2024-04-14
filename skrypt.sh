@@ -1,12 +1,12 @@
 #!/bin/bash
 
 #date
-if [[ "$1" == "--date" ]]; then
+if [[ "$1" == "--date" || "$1" == "-d" ]]; then
 	echo "Today's date: $(date)"
 fi
 
 #logs
-if [[ "$1" == "--logs" ]]; then
+if [[ "$1" == "--logs" || "$1" == "-l" ]]; then
 	if [[ -z "$2" ]]; then
 		number=100
 	else
@@ -21,7 +21,7 @@ if [[ "$1" == "--logs" ]]; then
 fi
 
 #help
-if [[ "$1" == "--help" ]]; then
+if [[ "$1" == "--help" || "$1" == "-h" ]]; then
 echo "Menu of all commands: "
 echo "--help 		Display help menu"
 echo "--date 		Display today's date"
