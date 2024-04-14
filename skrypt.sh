@@ -23,10 +23,11 @@ fi
 #help
 if [[ "$1" == "--help" || "$1" == "-h" ]]; then
 echo "Menu of all commands: "
-echo "--help 		Display help menu."
-echo "--date 		Display today's date."
-echo "--logs [x]	Creeate x log files. Default is 100."
-echo "--init		Clone repository and add to PATH."
+echo "--help, -h 		Display help menu."
+echo "--date, -d 		Display today's date."
+echo "--logs [x], -l		Create x log files. Default is 100."
+echo "--init, -i		Clone repository and add to PATH."
+echo "--error [x], -e		Create x error files. Default is 100."
 fi
 
 
@@ -51,4 +52,9 @@ if [[ "$1" == "--error" || "$1" == "-e" ]]; then
                 echo "Made by: $0" >> "errorx/error$i.txt"
                 echo "Date: $(date)" >> "errorx/error$i.txt"
         done
+fi
+
+#no arg
+if [[ -z "$1" ]; then
+	echo "No arguments, need at least one"
 fi
