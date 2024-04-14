@@ -54,7 +54,3 @@ if [[ "$1" == "--error" || "$1" == "-e" ]]; then
         done
 fi
 
-#no arg
-if [[ -z "$1" ]; then
-	echo "No arguments, need at least one"
-fi
